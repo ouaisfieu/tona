@@ -63,33 +63,6 @@
     revealables.forEach((el) => el.classList.add("is-in"));
   }
 
-  /* ---- Façade vidéo : charge l'iframe au clic ---- */
-  $$("[data-video]").forEach((el) => {
-    const load = () => {
-      const id = el.getAttribute("data-video");
-      const title = el.getAttribute("data-title") || "Vidéo";
-      const iframe = document.createElement("iframe");
-      iframe.src =
-        "https://www.youtube-nocookie.com/embed/" +
-        id +
-        "?autoplay=1&rel=0&modestbranding=1";
-      iframe.title = title;
-      iframe.allow =
-        "accelerated-motion; autoplay; encrypted-media; picture-in-picture; web-share";
-      iframe.allowFullscreen = true;
-      iframe.setAttribute("loading", "lazy");
-      el.innerHTML = "";
-      el.appendChild(iframe);
-    };
-    el.addEventListener("click", load);
-    el.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        load();
-      }
-    });
-  });
-
   /* ---- Sommaire : surlignage de la section active ---- */
   const tocLinks = $$(".toc a");
   const heads = tocLinks
