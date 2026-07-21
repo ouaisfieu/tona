@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TONA">
+  <rect width="64" height="64" rx="13" fill="#0b0e14"/>
+  <path d="M6 32 H16 L21 32 Q24 32 25 26 Q27 16 30 32 Q32 46 35 24 Q37 14 40 40 Q42 50 45 32 H58"
+        fill="none" stroke="#F0B23C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M35 24 Q37 14 40 40" fill="none" stroke="#E5533D" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="40" cy="40" r="2.4" fill="#E5533D"/>
+</svg>
