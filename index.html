@@ -175,17 +175,28 @@
         <p class="muted mt-s pretty">Une mise en perspective visuelle pour saisir l'essentiel avant d'entrer dans le détail.</p>
       </div>
       <div class="mt-l reveal">
-        <div class="video" data-video="IHbfR5EePDM" data-title="Vidéo — La guerre cognitive" role="button" tabindex="0" aria-label="Lire la vidéo sur la guerre cognitive">
-          <img class="video__thumb" src="https://i.ytimg.com/vi/IHbfR5EePDM/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720"
-               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/IHbfR5EePDM/hqdefault.jpg';">
-          <div class="video__scan" aria-hidden="true"></div>
-          <div class="video__ui">
-            <span class="video__rec">SIGNAL · REC</span>
-            <span class="video__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-            <span class="video__cap">Cliquer pour lire — chargé uniquement à la demande (youtube-nocookie)</span>
+        <!-- =====================================================================
+             POUR CHANGER LA VIDÉO : dans l'<iframe> ci-dessous, remplacez l'identifiant
+             qui suit « /embed/ » dans l'attribut src (ex. la valeur actuelle).
+             Pour une autre plateforme (Vimeo, PeerTube…), collez son URL d'intégration
+             complète à la place de toute la valeur de src.
+             ===================================================================== -->
+        <figure class="player">
+          <div class="player__bar" aria-hidden="true">
+            <span class="player__dot"></span>
+            <span>Signal vidéo · lecture directe</span>
           </div>
-        </div>
-        <p class="video-meta">La lecture ne démarre qu'au clic : aucune donnée n'est envoyée à YouTube tant que vous n'avez rien lancé.</p>
+          <div class="player__frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/jFRt-axDNNI?rel=0&modestbranding=1"
+              title="Vidéo — La guerre cognitive"
+              loading="lazy"
+              allow="accelerated-motion; autoplay; encrypted-media; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <figcaption class="player__cap">La guerre cognitive — mise en perspective visuelle.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
