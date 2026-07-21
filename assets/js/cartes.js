@@ -9,6 +9,7 @@
   const KEY_PROGRESS = "tona.cartes.progress.v1";
   const CATALOG_URL = "cartes/jeux/index.json";
   const CATALOG_BASE = "cartes/jeux/";
+  const GITHUB_API_DIR = "https://api.github.com/repos/ouaisfieu/tona/contents/cartes/jeux";
 
   const app = document.getElementById("app");
   if (!app) return;
@@ -387,6 +388,26 @@
     render();
   }
 
+  function renderStageActions() {
+    if (!session) return "";
+    return session.flipped
+      ? `<button class="btn" data-action="mark-review" style="border-color:var(--coral); color:var(--coral);">À revoir</button>
+         <button class="btn btn--primary" data-action="mark-know">Je savais</button>`
+      : `<button class="btn" data-action="prev" ${session.index === 0 ? "disabled" : ""}>◂ Précédente</button>
+         <button class="btn btn--primary" data-action="flip">Retourner la carte</button>
+         <button class="btn" data-action="next">Suivante ▸</button>`;
+  }
+
+  // Bascule la carte sans reconstruire le DOM, pour que la transition CSS (rotateY) s'anime réellement.
+  function flipCard() {
+    if (!session || session.index >= session.order.length) return;
+    session.flipped = !session.flipped;
+    const cardEl = app.querySelector(".flashcard");
+    if (cardEl) cardEl.classList.toggle("is-flipped", session.flipped);
+    const actionsEl = document.getElementById("stage-actions");
+    if (actionsEl) actionsEl.innerHTML = renderStageActions();
+  }
+
   function viewStudy(deckId) {
     const deck = getDeck(deckId);
     if (!deck) return notFound();
@@ -455,16 +476,7 @@
           </div>
         </div>
 
-        <div class="stage__actions">
-          ${
-            session.flipped
-              ? `<button class="btn" data-action="mark-review" style="border-color:var(--coral); color:var(--coral);">À revoir</button>
-                 <button class="btn btn--primary" data-action="mark-know">Je savais</button>`
-              : `<button class="btn" data-action="prev" ${session.index === 0 ? "disabled" : ""}>◂ Précédente</button>
-                 <button class="btn btn--primary" data-action="flip">Retourner la carte</button>
-                 <button class="btn" data-action="next">Suivante ▸</button>`
-          }
-        </div>
+        <div class="stage__actions" id="stage-actions">${renderStageActions()}</div>
       </div>
     </div>`;
   }
@@ -495,7 +507,58 @@
 
   let catalogCache = [];
 
-  async function loadCatalog() {
+  function titleFromFilename(name) {
+    const base = name.replace(/\.(csv|json)$/i, "").replace(/[-_]+/g, " ").trim();
+    return base.replace(/\b\w/g, (c) => c.toUpperCase());
+  }
+
+  function csvToDeckPreview(filename, text, overrides) {
+    overrides = overrides || {};
+    const rows = parseCSV(text);
+    const cards = rows.map((r) => ({ q: r[0] || "", a: r[1] || "" })).filter((c) => c.q || c.a);
+    const base = filename.replace(/\.csv$/i, "");
+    return {
+      id: overrides.id || slug(base),
+      title: overrides.title || titleFromFilename(filename),
+      description: overrides.description || "",
+      cards,
+    };
+  }
+
+  // Métadonnées optionnelles (titre, description) tenues à jour dans le petit manifeste local,
+  // utilisées pour enrichir l'affichage — mais jamais requises pour qu'un fichier .csv soit détecté.
+  async function loadMetadataOverrides() {
+    try {
+      const res = await fetch(CATALOG_URL, { cache: "no-store" });
+      if (!res.ok) return {};
+      const idx = await res.json();
+      const map = {};
+      (idx.decks || []).forEach((e) => { if (e.file) map[e.file] = e; });
+      return map;
+    } catch { return {}; }
+  }
+
+  // 1) Tentative : lister automatiquement les .csv du dossier cartes/jeux/ via l'API GitHub
+  //    (aucun fichier à maintenir : déposer un .csv dans le dossier suffit à le faire apparaître).
+  async function loadCatalogFromGithub() {
+    const res = await fetch(GITHUB_API_DIR, { headers: { Accept: "application/vnd.github+json" } });
+    if (!res.ok) throw new Error("gh-api");
+    const listing = await res.json();
+    if (!Array.isArray(listing)) throw new Error("gh-api-format");
+    const files = listing.filter((it) => it.type === "file" && /\.csv$/i.test(it.name));
+    const overrides = await loadMetadataOverrides();
+    const items = [];
+    for (const f of files) {
+      try {
+        const r = await fetch(f.download_url, { cache: "no-store" });
+        if (r.ok) items.push(csvToDeckPreview(f.name, await r.text(), overrides[f.name]));
+      } catch { /* fichier illisible : on l'ignore */ }
+    }
+    return items;
+  }
+
+  // 2) Repli : petit manifeste local, pour quand l'API GitHub est indisponible (limite de requêtes, hors-ligne…)
+  async function loadCatalogFromManifest() {
     const res = await fetch(CATALOG_URL, { cache: "no-store" });
     if (!res.ok) throw new Error("catalog");
     const idx = await res.json();
@@ -503,10 +566,18 @@
     for (const entry of idx.decks || []) {
       try {
         const r = await fetch(CATALOG_BASE + entry.file, { cache: "no-store" });
-        if (r.ok) items.push(await r.json());
-      } catch { /* ignore un fichier manquant */ }
+        if (r.ok) items.push(csvToDeckPreview(entry.file, await r.text(), entry));
+      } catch { /* fichier manquant : on l'ignore */ }
     }
     return items;
+  }
+
+  async function loadCatalog() {
+    try {
+      const viaGithub = await loadCatalogFromGithub();
+      if (viaGithub.length) return viaGithub;
+    } catch { /* on retombe sur le manifeste local */ }
+    return loadCatalogFromManifest();
   }
 
   function importDeckFromCatalog(deckData) {
@@ -617,7 +688,7 @@
         moveCard(currentRoute().id, btn.dataset.cardid, 1);
         break;
       case "flip":
-        if (session) { session.flipped = !session.flipped; render(); }
+        flipCard();
         break;
       case "next":
         if (session) { session.index = Math.min(session.index + 1, session.order.length); session.flipped = false; render(); }
@@ -685,10 +756,7 @@
     if (document.activeElement && ["TEXTAREA", "INPUT"].includes(document.activeElement.tagName)) return;
     if (e.key === " " || e.key === "Enter") {
       e.preventDefault();
-      if (session.index < session.order.length) {
-        session.flipped = !session.flipped;
-        render();
-      }
+      if (session.index < session.order.length) flipCard();
     } else if (e.key === "ArrowRight" && !session.flipped) {
       session.index = Math.min(session.index + 1, session.order.length);
       render();
@@ -793,7 +861,11 @@
         })
         .join("")}</div>`;
     } catch {
-      body.innerHTML = `<p class="hint">Impossible de charger le catalogue pour l'instant. Vérifiez votre connexion et réessayez.</p>`;
+      if (location.protocol === "file:") {
+        body.innerHTML = `<p class="hint">La bibliothèque ne peut pas se charger quand la page est ouverte directement depuis un fichier (adresse en <code>file://</code>). Ouvrez le site via son adresse <code>https://…</code> (ou un serveur local) pour que cette fonction marche.</p>`;
+      } else {
+        body.innerHTML = `<p class="hint">Impossible de charger le catalogue pour l'instant. Vérifiez votre connexion et réessayez.</p>`;
+      }
     }
   }
 
