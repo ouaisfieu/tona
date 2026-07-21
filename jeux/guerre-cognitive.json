@@ -1,0 +1,313 @@
+{
+  "id": "guerre-cognitive",
+  "title": "Guerre cognitive — repères et doctrines",
+  "description": "Définitions, doctrines (OTAN, Russie, Chine), concepts clés et acteurs de la guerre cognitive et narrative.",
+  "tags": [
+    "guerre cognitive",
+    "OTAN",
+    "désinformation",
+    "neurosciences"
+  ],
+  "cards": [
+    {
+      "id": "c001",
+      "q": "Selon l'OTAN (NWCC 2021), quel espace est désormais formellement désigné comme le \"sixième domaine\" de la guerre ?",
+      "a": "Le domaine cognitif (ou humain)."
+    },
+    {
+      "id": "c002",
+      "q": "Quelle est la distinction majeure entre les opérations psychologiques (PSYOPS) classiques et la guerre cognitive ?",
+      "a": "Les PSYOPS visent ce que l'on pense (contenu), tandis que la guerre cognitive vise la façon dont on pense (processus)."
+    },
+    {
+      "id": "c003",
+      "q": "Dans le \"triptyque de l'influence\", quel est le rôle spécifique des neurosciences ?",
+      "a": "Cartographier les mécanismes biochimiques de la décision pour court-circuiter le raisonnement via l'amygdale."
+    },
+    {
+      "id": "c004",
+      "q": "Comment l'intelligence artificielle (IA) transforme-t-elle la manipulation des masses selon les sources ?",
+      "a": "Elle industrialise le micro-ciblage psychographique et la production massive de médias synthétiques (deepfakes)."
+    },
+    {
+      "id": "c005",
+      "q": "Définition : Contrôle Réflexif (doctrine russe)",
+      "a": "Technique consistant à transmettre des informations calibrées pour qu'un adversaire prenne, de son plein gré, une décision prédéterminée par l'agresseur."
+    },
+    {
+      "id": "c006",
+      "q": "Quel est l'objectif central de la doctrine chinoise de la \"domination algorithmique\" ?",
+      "a": "Gagner la guerre avant le premier engagement cinétique en reconfigurant les matrices de sens des populations adverses."
+    },
+    {
+      "id": "c007",
+      "q": "Dans le modèle épidémiologique SIR appliqué à la désinformation, que représente le paramètre $R_0$ ?",
+      "a": "Le nombre de reproduction de base déterminant si une rumeur s'éteindra ou infectera de manière exponentielle le corps social."
+    },
+    {
+      "id": "c008",
+      "q": "L'application de l'attracteur de Lorenz à la guerre cognitive suggère qu'une manipulation légère de la vélocité de l'information ($\\sigma$) peut provoquer _____.",
+      "a": "Un effondrement systémique ou une instabilité imprévisible de la société."
+    },
+    {
+      "id": "c009",
+      "q": "Que signifie l'acronyme de la boucle décisionnelle OODA ?",
+      "a": "Observation, Orientation, Décision, Action."
+    },
+    {
+      "id": "c010",
+      "q": "Concept : Extensibilité Gracieuse (Graceful Extensibility)",
+      "a": "Capacité d'un système décisionnel à étendre ses capacités de réponse sous pression extrême sans s'effondrer."
+    },
+    {
+      "id": "c011",
+      "q": "Quel organe cérébral est considéré comme le siège des émotions et la cible privilégiée pour court-circuiter le cortex préfrontal ?",
+      "a": "L'amygdale."
+    },
+    {
+      "id": "c012",
+      "q": "Quelle théorie économique de George Akerlof est utilisée pour expliquer l'asymétrie d'information initiale ?",
+      "a": "Le marché des \"tacots\" (Market for Lemons)."
+    },
+    {
+      "id": "c013",
+      "q": "Selon Shoshana Zuboff, comment se définit le \"capitalisme de surveillance\" ?",
+      "a": "Un modèle revendiquant l'expérience humaine privée comme matière première gratuite pour des produits de prédiction."
+    },
+    {
+      "id": "c014",
+      "q": "Qu'est-ce que le \"surplus comportemental\" dans l'économie des plateformes ?",
+      "a": "L'agrégat de données (hésitations, clics, émotions) utilisé pour modéliser et modifier activement le comportement des utilisateurs."
+    },
+    {
+      "id": "c015",
+      "q": "Quelle est la caractéristique principale du \"techno-féodalisme\" ?",
+      "a": "Le remplacement des marchés par des fiefs numériques où les entreprises sont des vassaux et les utilisateurs des serfs générant de la donnée."
+    },
+    {
+      "id": "c016",
+      "q": "Quel pays a servi d'exemple de \"colonialisme de la donnée\" via un accord sur la reconnaissance faciale avec l'entreprise CloudWalk ?",
+      "a": "Le Zimbabwe."
+    },
+    {
+      "id": "c017",
+      "q": "Selon Susan Strange, qu'est-ce que le \"pouvoir structurel\" ?",
+      "a": "La capacité de définir le cadre normatif et matériel (sécurité, finance, production, savoir) dans lequel les autres acteurs opèrent."
+    },
+    {
+      "id": "c018",
+      "q": "En France, quelle agence est spécifiquement chargée de détecter les Ingérences Numériques Étrangères (INE) ?",
+      "a": "VIGINUM."
+    },
+    {
+      "id": "c019",
+      "q": "Quelle est la différence entre le \"prebunking\" (inoculation cognitive) et le \"fact-checking\" ?",
+      "a": "Le prebunking prévient la manipulation en exposant les techniques à l'avance, alors que le fact-checking intervient après la diffusion du mensonge."
+    },
+    {
+      "id": "c020",
+      "q": "Concept : Prime au menteur (Liar's Dividend)",
+      "a": "Phénomène où l'existence de l'IA permet à un coupable de nier une preuve authentique en prétendant qu'il s'agit d'un deepfake."
+    },
+    {
+      "id": "c021",
+      "q": "Quel pays est le pionnier mondial dans l'inscription des \"neurodroits\" au sein de sa constitution ?",
+      "a": "Le Chili."
+    },
+    {
+      "id": "c022",
+      "q": "Quel rapport de 2024 a redéfini la sécurité de l'UE comme une responsabilité partagée par l'ensemble de la société ?",
+      "a": "Le rapport Niinistö."
+    },
+    {
+      "id": "c023",
+      "q": "La tactique russe de la \"Maskirovka\" désigne un état d'esprit permanent fondé sur _____.",
+      "a": "La déception, le camouflage et la dissimulation des intentions réelles."
+    },
+    {
+      "id": "c024",
+      "q": "Qu'est-ce que la \"Narrative Kill Chain\" identifiée par Sensity AI ?",
+      "a": "Une séquence modulaire de payloads basés sur des deepfakes conçus pour produire des effets cognitifs prévisibles."
+    },
+    {
+      "id": "c025",
+      "q": "Définition : Lawfare",
+      "a": "L'instrumentalisation du droit international pour restreindre la liberté d'action d'un adversaire ou protéger ses propres opérations hybrides."
+    },
+    {
+      "id": "c026",
+      "q": "Quel concept d'Yves Citton décrit un régime où les médias structurent la vie politique en gouvernant l'attention ?",
+      "a": "La médiarchie."
+    },
+    {
+      "id": "c027",
+      "q": "Selon Joseph Nye, qu'est-ce que le \"Soft Power\" ?",
+      "a": "La capacité d'un pays à influencer les autres par l'attrait de sa culture, de ses valeurs et de ses politiques plutôt que par la force."
+    },
+    {
+      "id": "c028",
+      "q": "Dans le cadre de la cyber-résilience, l'objectif d'autosuffisance promu pour les citoyens européens est de _____.",
+      "a": "72 heures."
+    },
+    {
+      "id": "c029",
+      "q": "Qu'est-ce que la \"lance à incendie du mensonge\" (Fire hose of falsehood) ?",
+      "a": "Une tactique saturant l'espace médiatique de versions contradictoires pour détruire la capacité du public à distinguer le vrai du faux."
+    },
+    {
+      "id": "c030",
+      "q": "Quel est l'impact tactique recherché par la saturation de la boucle OODA de l'adversaire ?",
+      "a": "Provoquer une paralysie analytique et une incapacité à prendre des décisions rationnelles en temps utile."
+    },
+    {
+      "id": "c031",
+      "q": "Le modèle psychométrique \"OCÉAN\" évalue la personnalité selon l'ouverture, la conscienciosité, l'extraversion, l'agréabilité et _____.",
+      "a": "Le névrosisme."
+    },
+    {
+      "id": "c032",
+      "q": "Quel dispositif américain de 2026 vise à sécuriser l'approvisionnement en minéraux critiques face aux restrictions étrangères ?",
+      "a": "Le Project Vault."
+    },
+    {
+      "id": "c033",
+      "q": "Quels sont les trois piliers de l'immunisation mentale préconisés face à la menace cognitive ?",
+      "a": "Éducation aux biais, extensibilité gracieuse et adaptabilité soutenue."
+    },
+    {
+      "id": "c034",
+      "q": "Quelle opération russe consistait à cloner des sites de presse occidentaux (typosquatting) pour diffuser de la propagande ?",
+      "a": "L'opération Doppelgänger (ou Storm-1099)."
+    },
+    {
+      "id": "c035",
+      "q": "Quelle est la cible finale de l'\"encerclement cognitif\" selon l'école de guerre économique française ?",
+      "a": "La société civile, utilisée pour paralyser son propre État ou ses industries souveraines."
+    },
+    {
+      "id": "c036",
+      "q": "La technique TDCS (Stimulation Transcrânienne à Courant Continu) est étudiée en neurostratégie pour _____.",
+      "a": "Modifier l'activité cérébrale afin d'induire de la fatigue, de la peur ou d'altérer la concentration à distance."
+    },
+    {
+      "id": "c037",
+      "q": "Qu'est-ce que le \"chaos épistémique\" ?",
+      "a": "Un état où la saturation d'informations contradictoires rend impossible l'établissement d'une vérité commune, paralysant la démocratie."
+    },
+    {
+      "id": "c038",
+      "q": "Pourquoi le droit international classique (Article 2, paragraphe 4 de la Charte des Nations Unies) peine-t-il à réguler la guerre cognitive ?",
+      "a": "Il ne reconnaît que la force cinétique (physique) et non la violence immatérielle ou neurobiologique."
+    },
+    {
+      "id": "c039",
+      "q": "Quel est le risque du \"paradoxe démocratique\" dans la défense contre la guerre hybride ?",
+      "a": "Que l'État finisse par adopter les méthodes de censure et de contrôle de ses assaillants pour protéger la population."
+    },
+    {
+      "id": "c040",
+      "q": "L'incident de Vilnius en 2026 illustre qu'une attaque cognitive produit ses effets _____.",
+      "a": "Bien avant et bien après tout engagement physique (durée prolongée du chaos numérique)."
+    },
+    {
+      "id": "c041",
+      "q": "Quelle technologie permettrait théoriquement de détourner des données neurales pour manipuler le stress d'un individu en temps réel ?",
+      "a": "L'interface cerveau-machine (BCI)."
+    },
+    {
+      "id": "c042",
+      "q": "Quelle est la différence entre l'aléa moral et la sélection adverse en microéconomie ?",
+      "a": "La sélection adverse survient avant le contrat (dissimulation), l'aléa moral survient après (comportement opportuniste)."
+    },
+    {
+      "id": "c043",
+      "q": "Dans le contexte géo-économique, quels éléments la Chine utilise-t-elle comme leviers de pression (chokepoints) ?",
+      "a": "Les terres rares (lithium, cobalt, gallium, germanium)."
+    },
+    {
+      "id": "c044",
+      "q": "Quel concept sociologique d'Israelene explique le repli sur l'identité intragroupe et la haine de l'exogroupe ?",
+      "a": "La polarisation affective."
+    },
+    {
+      "id": "c045",
+      "q": "En 2026, quel est le taux d'erreur visé pour la précision de la parole via les interfaces BCI optimisées par l'IA ?",
+      "a": "Moins de $5\\%$."
+    },
+    {
+      "id": "c046",
+      "q": "La stratégie de l'UE pour contrer les FIMI se concentre sur le comportement _____ plutôt que sur le contenu des messages.",
+      "a": "Inauthentique coordonné."
+    },
+    {
+      "id": "c047",
+      "q": "Concept : Neuro-arme (Neurostrike)",
+      "a": "Arme à énergie dirigée utilisant des ondes pour altérer le système nerveux central ou provoquer une panique physiologique."
+    },
+    {
+      "id": "c048",
+      "q": "Quel est l'objectif des \"économies d'action\" selon Shoshana Zuboff ?",
+      "a": "Passer de la simple surveillance à la modification active du comportement humain via des déclencheurs numériques."
+    },
+    {
+      "id": "c049",
+      "q": "Quelle est la fonction du \"Signal d'Erreur\" neurologique dans une attaque cognitive ?",
+      "a": "Instiller un doute diffus ou saturer le cerveau pour forcer une réponse émotionnelle impulsive pilotée par l'amygdale."
+    },
+    {
+      "id": "c050",
+      "q": "Comment se définit la \"souveraineté numérique\" pour une nation ?",
+      "a": "La capacité à posséder ses propres infrastructures physiques (cloud, semi-conducteurs) et à réguler son espace informationnel."
+    },
+    {
+      "id": "c051",
+      "q": "Qu'est-ce que l'\"astroturfing\" ?",
+      "a": "L'utilisation de faux comptes ou bots pour créer l'illusion d'un mouvement de masse ou d'un consensus populaire organique."
+    },
+    {
+      "id": "c052",
+      "q": "Le concept de \"rhinocéros gris\" en stratégie désigne _____.",
+      "a": "Une menace évidente et très probable qui est ignorée jusqu'à l'impact (par opposition au \"cygne noir\")."
+    },
+    {
+      "id": "c053",
+      "q": "Quel type de pouvoirSusan Strange associe-t-elle à la structure du savoir (knowledge structure) ?",
+      "a": "Le pouvoir structurel."
+    },
+    {
+      "id": "c054",
+      "q": "Dans la guerre hybride, quel est le rôle des \"proxies\" ?",
+      "a": "Agir comme des mandataires (groupes criminels, mercenaires) pour permettre à un État de bénéficier d'un déni plausible."
+    },
+    {
+      "id": "c055",
+      "q": "Quelle est la finalité du \"Bouclier de la Démocratie Européenne\" (EDS) ?",
+      "a": "Protéger l'intégrité de l'espace informationnel et détecter les menaces de manipulation étrangère (FIMI)."
+    },
+    {
+      "id": "c056",
+      "q": "Pourquoi l'attribution d'une attaque hybride est-elle structurellement difficile ?",
+      "a": "À cause de l'utilisation d'acteurs non étatiques et de la dissimulation technique (VPN, cryptomonnaies)."
+    },
+    {
+      "id": "c057",
+      "q": "Quel est le but de l'opération \"Matriochka\" ?",
+      "a": "Épuiser les vérificateurs de faits occidentaux en les inondant de requêtes absurdes pour masquer des campagnes réelles."
+    },
+    {
+      "id": "c058",
+      "q": "L'expression \"Gagner la guerre avant la guerre\" est associée à quel philosophe militaire ancien cité par l'OTAN ?",
+      "a": "Sun Tzu."
+    },
+    {
+      "id": "c059",
+      "q": "Quel droit fondamental les experts proposent-ils pour protéger l'individu contre la lecture ou la modification de ses données cérébrales ?",
+      "a": "La confidentialité mentale (ou vie privée mentale)."
+    },
+    {
+      "id": "c060",
+      "q": "La transition du contrôle de l'input au contrôle du _____ marque l'avènement de la guerre cognitive.",
+      "a": "Processing (traitement de l'information)."
+    }
+  ]
+}
