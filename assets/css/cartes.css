@@ -152,9 +152,9 @@ dialog.modal::backdrop { background: rgba(6,8,12,0.72); backdrop-filter: blur(2p
 .catalogitem__d { color: var(--muted); font-size: var(--step--1); margin-top: 0.2rem; }
 
 .toast {
-  position: fixed; left: 50%; bottom: 1.6rem; transform: translateX(-50%) translateY(120%);
+  position: fixed; left: 50%; top: 5.4rem; transform: translateX(-50%) translateY(-160%);
   background: var(--paper); color: var(--ink); font-family: var(--f-mono); font-size: 0.78rem;
-  padding: 0.8em 1.3em; border-radius: var(--radius); z-index: 200; letter-spacing: 0.02em;
+  padding: 0.8em 1.3em; border-radius: var(--radius); z-index: 300; letter-spacing: 0.02em;
   transition: transform 0.35s var(--ease); box-shadow: 0 20px 50px -20px rgba(0,0,0,0.6);
   max-width: min(88vw, 460px); width: max-content; text-align: center;
   word-wrap: break-word; overflow-wrap: break-word; box-sizing: border-box; line-height: 1.5;
