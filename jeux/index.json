@@ -1,5 +1,10 @@
 {
   "decks": [
-    { "file": "guerre-cognitive.json" }
+    {
+      "file": "guerre-cognitive.csv",
+      "id": "guerre-cognitive",
+      "title": "Guerre cognitive — repères et doctrines",
+      "description": "Définitions, doctrines (OTAN, Russie, Chine), concepts clés et acteurs de la guerre cognitive et narrative."
+    }
   ]
 }
