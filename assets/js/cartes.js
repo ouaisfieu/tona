@@ -7,9 +7,10 @@
 
   const KEY_DECKS = "tona.cartes.decks.v1";
   const KEY_PROGRESS = "tona.cartes.progress.v1";
-  const CATALOG_URL = "cartes/jeux/index.json";
-  const CATALOG_BASE = "cartes/jeux/";
-  const GITHUB_API_DIR = "https://api.github.com/repos/ouaisfieu/tona/contents/cartes/jeux";
+  // Plusieurs emplacements possibles pour le dossier des jeux, essayés dans cet ordre.
+  // (le premier qui répond est utilisé — pas besoin de configuration si le dossier bouge)
+  const CATALOG_DIR_CANDIDATES = ["jeux", "cartes/jeux"];
+  const GITHUB_REPO = "ouaisfieu/tona";
 
   const app = document.getElementById("app");
   if (!app) return;
@@ -27,6 +28,11 @@
     String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   const uid = (p) => p + "_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+
+  function truncate(s, max) {
+    s = String(s ?? "");
+    return s.length > max ? s.slice(0, max - 1).trimEnd() + "…" : s;
+  }
 
   let toastTimer = null;
   function toast(msg) {
@@ -527,9 +533,9 @@
 
   // Métadonnées optionnelles (titre, description) tenues à jour dans le petit manifeste local,
   // utilisées pour enrichir l'affichage — mais jamais requises pour qu'un fichier .csv soit détecté.
-  async function loadMetadataOverrides() {
+  async function loadMetadataOverrides(dir) {
     try {
-      const res = await fetch(CATALOG_URL, { cache: "no-store" });
+      const res = await fetch(dir + "/index.json", { cache: "no-store" });
       if (!res.ok) return {};
       const idx = await res.json();
       const map = {};
@@ -538,15 +544,18 @@
     } catch { return {}; }
   }
 
-  // 1) Tentative : lister automatiquement les .csv du dossier cartes/jeux/ via l'API GitHub
+  // 1) Tentative : lister automatiquement les .csv d'un dossier via l'API GitHub
   //    (aucun fichier à maintenir : déposer un .csv dans le dossier suffit à le faire apparaître).
-  async function loadCatalogFromGithub() {
-    const res = await fetch(GITHUB_API_DIR, { headers: { Accept: "application/vnd.github+json" } });
+  async function loadCatalogFromGithub(dir) {
+    const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${dir}`, {
+      headers: { Accept: "application/vnd.github+json" },
+    });
     if (!res.ok) throw new Error("gh-api");
     const listing = await res.json();
     if (!Array.isArray(listing)) throw new Error("gh-api-format");
     const files = listing.filter((it) => it.type === "file" && /\.csv$/i.test(it.name));
-    const overrides = await loadMetadataOverrides();
+    if (!files.length) throw new Error("gh-api-empty");
+    const overrides = await loadMetadataOverrides(dir);
     const items = [];
     for (const f of files) {
       try {
@@ -558,14 +567,14 @@
   }
 
   // 2) Repli : petit manifeste local, pour quand l'API GitHub est indisponible (limite de requêtes, hors-ligne…)
-  async function loadCatalogFromManifest() {
-    const res = await fetch(CATALOG_URL, { cache: "no-store" });
+  async function loadCatalogFromManifest(dir) {
+    const res = await fetch(dir + "/index.json", { cache: "no-store" });
     if (!res.ok) throw new Error("catalog");
     const idx = await res.json();
     const items = [];
     for (const entry of idx.decks || []) {
       try {
-        const r = await fetch(CATALOG_BASE + entry.file, { cache: "no-store" });
+        const r = await fetch(dir + "/" + entry.file, { cache: "no-store" });
         if (r.ok) items.push(csvToDeckPreview(entry.file, await r.text(), entry));
       } catch { /* fichier manquant : on l'ignore */ }
     }
@@ -573,11 +582,17 @@
   }
 
   async function loadCatalog() {
-    try {
-      const viaGithub = await loadCatalogFromGithub();
-      if (viaGithub.length) return viaGithub;
-    } catch { /* on retombe sur le manifeste local */ }
-    return loadCatalogFromManifest();
+    for (const dir of CATALOG_DIR_CANDIDATES) {
+      try {
+        const viaGithub = await loadCatalogFromGithub(dir);
+        if (viaGithub.length) return viaGithub;
+      } catch { /* on tente le repli pour ce dossier avant de passer au suivant */ }
+      try {
+        const viaManifest = await loadCatalogFromManifest(dir);
+        if (viaManifest.length) return viaManifest;
+      } catch { /* ce dossier ne répond pas : on essaie le candidat suivant */ }
+    }
+    return [];
   }
 
   function importDeckFromCatalog(deckData) {
@@ -721,10 +736,10 @@
         const deckData = catalogCache[Number(btn.dataset.catalogIdx)];
         if (!deckData) break;
         const deck = importDeckFromCatalog(deckData);
-        toast(`Paquet « ${deck.title} » ajouté (${deck.cards.length} cartes).`);
         dlgCatalog.close();
         location.hash = "#/";
         render();
+        toast(`Ajouté : « ${truncate(deck.title, 40)} » (${deck.cards.length} cartes)`);
         break;
       }
     }
@@ -821,16 +836,16 @@
     const target = dlgImport.dataset.target;
     if (target) {
       const n = importCardsInto(target, parsed.cards);
-      toast(`${n} carte${n > 1 ? "s" : ""} ajoutée${n > 1 ? "s" : ""} au paquet.`);
       dlgImport.close();
       render();
+      toast(`${n} carte${n > 1 ? "s" : ""} ajoutée${n > 1 ? "s" : ""} au paquet`);
     } else {
       const deck = createDeck({ title: parsed.title, description: parsed.description || "" });
       importCardsInto(deck.id, parsed.cards);
-      toast(`Paquet « ${deck.title} » créé avec ${parsed.cards.length} cartes.`);
       dlgImport.close();
       location.hash = "#/editer/" + deck.id;
       render();
+      toast(`Créé : « ${truncate(deck.title, 40)} » (${parsed.cards.length} cartes)`);
     }
   });
 
@@ -842,7 +857,7 @@
       const items = await loadCatalog();
       catalogCache = items;
       if (!items.length) {
-        body.innerHTML = `<p class="hint">Aucun paquet disponible dans la bibliothèque du site pour le moment.</p>`;
+        body.innerHTML = `<p class="hint">Aucun fichier .csv trouvé dans <code>jeux/</code> ou <code>cartes/jeux/</code> à la racine du site. Vérifiez l'emplacement du dossier dans votre dépôt.</p>`;
         return;
       }
       body.innerHTML = `<div class="catalog">${items
