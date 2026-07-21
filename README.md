@@ -58,9 +58,11 @@ données structurées JSON-LD (`WebSite`, `Organization`, `Article`, `Breadcrumb
 
 ## Vidéo intégrée
 
-La vidéo YouTube (`n0ZskSQ02mQ`) est chargée **à la demande** via une façade cliquable
-(domaine `youtube-nocookie.com`) : aucune requête vers YouTube tant que l'utilisateur
-n'a pas lancé la lecture. Meilleure performance, meilleure confidentialité.
+La vidéo est un lecteur **à chargement direct** (iframe `youtube-nocookie`, format 16:9
+responsive). Pour **changer de vidéo**, une seule chose à modifier dans `index.html` :
+l'identifiant `jFRt-axDNNI` dans l'attribut `src` de l'`<iframe>` (un commentaire le
+signale juste au-dessus). Pour une autre plateforme (Vimeo, PeerTube…), collez son URL
+d'intégration à la place de la valeur de `src`.
 
 ## Modifier le contenu
 
