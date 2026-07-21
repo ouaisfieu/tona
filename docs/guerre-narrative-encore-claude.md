@@ -1,0 +1,117 @@
+# Récits sous influence : la guerre narrative traverse la Belgique
+
+**La guerre narrative n'est plus une métaphore en Belgique : elle structure désormais la vie démocratique à trois niveaux emboîtés.** Entre 2022 et 2026, le pays — siège de l'OTAN, des institutions européennes et du dépositaire Euroclear — est devenu à la fois cible prioritaire et laboratoire d'ingérences étrangères, d'instrumentalisation politique interne et de diffusion virale de désinformation. Le scandale *Voice of Europe* (mars 2024), l'opération *Doppelganger*, l'affaire Creyelman/Chine, les 22,8 % du Vlaams Belang au scrutin du 9 juin 2024, l'arrivée de Bart De Wever au 16 rue de la Loi (3 février 2025) et le retard des F-16 promis à Kiev dessinent un paysage où récits étrangers, logiques partisanes internes et vulnérabilités citoyennes se renforcent mutuellement. Ce dossier propose une grille à trois niveaux — macro, méso, micro — pour outiller l'éducation permanente face à ce qui est devenu un enjeu de survie démocratique.
+
+## La guerre narrative comme concept opérationnel
+
+La guerre narrative désigne **la lutte pour imposer un récit dominant dans l'espace informationnel afin d'orienter perceptions, émotions et décisions**. Elle n'est ni tout à fait la propagande classique, ni simplement la « désinformation ». Elle se situe à l'intersection de plusieurs cadres théoriques qu'il importe de distinguer pour la combattre.
+
+Joseph Nye avait formalisé dès 1990 le *soft power* : la capacité d'attirer par les valeurs, la culture et la légitimité des politiques publiques. En novembre 2017, Christopher Walker et Jessica Ludwig (National Endowment for Democracy) introduisent le *sharp power* — ces techniques « perçantes » qui, loin de séduire, **manipulent les audiences démocratiques en déformant l'information qui leur parvient**. RT, Sputnik et les Instituts Confucius en sont les archétypes.
+
+L'Union européenne a adopté le cadre FIMI (*Foreign Information Manipulation and Interference*) dans les conclusions du Conseil du 18 juillet 2022 : comportement intentionnel, coordonné, manipulatif, menaçant les procédures démocratiques, **généralement non illégal** — ce qui complique la réponse. Le Service européen pour l'action extérieure (SEAE) publie depuis 2023 des rapports FIMI annuels : le troisième (mars 2025) a analysé 505 incidents impliquant 38 000 comptes sur 25 plateformes ; le quatrième (2026) établit qu'**un incident sur quatre en 2025 mobilise désormais des outils d'IA générative**.
+
+L'OTAN, de son côté, a finalisé fin 2024 un concept exploratoire de *cognitive warfare* définie comme « activités conduites en synchronisation avec d'autres instruments de puissance, pour affecter attitudes et comportements en influençant, protégeant ou perturbant la cognition individuelle et de groupe ». Ce concept englobe PsyOps, InfoOps, StratCom et cyber, et mobilise IA, big data et sciences comportementales. La guerre hybride, enfin, combine sabotage, cyberattaques, désinformation, pressions économiques et instrumentalisation migratoire sous le seuil du conflit armé — doctrine russe depuis 2014, objet central du séminaire Egmont/IRSD des 21-22 novembre 2025 co-piloté par Bernard Siman et Alexander Mattelaer.
+
+## Niveau macro : la Belgique, cible structurelle des ingérences russes et chinoises
+
+### Russie : de Doppelganger à Voice of Europe
+
+L'ONG bruxelloise **EU DisinfoLab** révèle le 27 septembre 2022 l'opération *Doppelganger* : la russe Social Design Agency clone les sites du *Monde*, du *Parisien*, de *Bild*, du *Spiegel*, du *Guardian* et du *Washington Post* pour y relayer la propagande anti-Ukraine. Malgré les sanctions européennes du 28 juillet 2023 contre sept individus et cinq entités russes, l'infrastructure survit : l'hébergeur Aeza de Saint-Pétersbourg et ses relais (Aurologic à Francfort, TNSecurity à Londres) fournissent plus de 300 préfixes réseau pour environ 50 000 euros mensuels.
+
+Le 27 mars 2024, les services tchèques démantèlent le média en ligne *voice-of-europe.eu*, contrôlé par l'oligarque Viktor Medvedtchouk, lui-même relié au cinquième service du FSB. Le Premier ministre Alexander De Croo confirme le lendemain devant la Chambre que **des eurodéputés ont été « payés pour exercer de la propagande russe »**. Six pays sont visés, dont la Belgique. Le 29 mai 2024, police belge et française perquisitionnent le bureau bruxellois de Guillaume Pradoura — assistant parlementaire du néerlandais Marcel de Graaf, passé par le Rassemblement national et par Maximilian Krah (AfD) — pour ingérence étrangère et organisation criminelle.
+
+La menace s'étend au sabotage basse intensité. Le 28 mars 2024 à 12 h 18, le signal de Baby TV est piraté en Belgique et remplacé par des images de chars et de Poutine. Le collectif **NoName057(16)** mène des attaques DDoS en cascade : Fédération Wallonie-Bruxelles, MyGov.be, Parlement wallon, sites provinciaux et communaux (le 7 octobre 2024, veille des élections communales), Chambre des représentants, De Lijn, ports belges, Engie. La VSSE documente en 2024 des opérations Telegram offrant une vingtaine d'euros pour coller des autocollants anti-OTAN dans le quartier Schuman. À l'automne 2025, une vague de **survols de drones** au-dessus d'infrastructures sensibles coïncide avec le débat européen sur la mobilisation des avoirs russes gelés chez Euroclear ; la VSSE rapporte alors un « discours public menaçant » du SVR à l'égard de la Belgique.
+
+### Chine : patience économique et pénétration parlementaire
+
+Le 30 septembre 2025, la Cour régionale supérieure de Dresde condamne **Jian Guo**, collaborateur parlementaire bruxellois de l'eurodéputé AfD Maximilian Krah entre 2019 et avril 2024, à quatre ans et neuf mois de prison pour espionnage au profit du ministère chinois de la Sécurité de l'État. Le jugement établit qu'il a transmis plusieurs centaines de documents sur les affaires européennes et surveillé des dissidents chinois en Allemagne. *Der Spiegel* révèle que Krah a reçu plus de 50 000 euros de sociétés proches de Guo entre 2019 et 2022.
+
+Côté belge, l'**affaire Frank Creyelman** — ex-sénateur Vlaams Belang actionné de 2019 à 2022 par l'officier MSS « Daniel Woo » pour influencer le débat européen sur Hong Kong, les Ouïghours et l'Ukraine contre rémunération en cryptomonnaies — a été révélée le 15 décembre 2023 par le *Financial Times*, *Le Monde*, *Der Spiegel* et *De Tijd*. Creyelman bénéficie d'un non-lieu le 10 mars 2026 faute de preuves d'origine étatique, mais la documentation journalistique reste incontestée. Son frère Steven, président de la commission des Achats militaires, a démissionné de cette fonction en décembre 2023. Le rapport VSSE 2025 décrit par ailleurs la création de « sociétés miroirs » en Chine à partir de spin-offs technologiques belges, et la pression exercée sur les diasporas ouïghoure, tibétaine, hongkongaise et taïwanaise à Bruxelles.
+
+### Qatargate : quand le sharp power passe par les ONG
+
+Le 9 décembre 2022, le juge bruxellois Michel Claise saisit **1,5 million d'euros en liquide**, notamment chez la vice-présidente grecque du Parlement européen Eva Kaïlí. Pier Antonio Panzeri (fondateur de Fight Impunity) reconnaît le 17 janvier 2023 avoir dirigé une organisation criminelle agissant pour le Qatar et le Maroc. L'eurodéputé belge **Marc Tarabella** est inculpé. Au-delà de la corruption, le Qatargate illustre la porosité entre lobbying, soft power (Coupe du monde, Qatar Airways) et sharp power : le discours de Kaïlí le 21 novembre 2022 au Parlement célébrant « le leadership qatari en droit du travail » était directement orchestré. L'écosystème d'ONG, faute d'inscription au registre de transparence, devient vecteur d'influence. Paradoxalement, le scandale authentique a ensuite été **réinjecté par Doppelganger et Voice of Europe dans la campagne des européennes 2024** sous le récit « Bruxelles corrompue » — illustration canonique de la circularité entre défaillance démocratique réelle et manipulation narrative adverse.
+
+## Niveau méso : médias, partis et clivage linguistique
+
+### Un paysage médiatique hyper-concentré et asymétrique
+
+Le marché médiatique belge combine fragmentation linguistique et concentration capitalistique extrême. Au nord dominent DPG Media (Het Laatste Nieuws, De Morgen, VTM) et Mediahuis (De Standaard, Het Nieuwsblad). Au sud, le duopole Rossel–IPM a volé en éclats : le **23 juin 2025, les deux groupes ont signé un protocole de fusion-absorption**, formalisé le 13 avril 2026 devant l'Autorité belge de la concurrence. IPM apporte ses titres à Rossel contre 10 % du capital. Un seul acteur dominera désormais la presse quotidienne francophone. L'Association des journalistes professionnels dénonce une concentration sans précédent.
+
+Le Reuters Digital News Report 2025 révèle un écart structurel de confiance : **51 % en Flandre contre 35 % en Wallonie**, soit 16 points de différence. La VRT et la RTBF restent les marques les plus fiables dans leurs communautés respectives, mais l'évitement d'actualité atteint 64 % en Flandre en 2025, contre 48 % en 2017. Environ 70 % des Belges déclarent avoir rencontré de la désinformation la semaine précédant l'enquête Eurobaromètre. Chez les 18-24 ans, TikTok, Instagram et YouTube ont supplanté les marques historiques — et 44 % des utilisateurs jugent TikTok difficile à évaluer en termes de fiabilité.
+
+### Partis politiques : l'industrialisation du récit
+
+Les élections du 9 juin 2024 ont été **les plus coûteuses de l'histoire belge sur les plateformes** : 15 086 183 euros dépensés par les 13 partis en publicité en ligne, soit cinq fois et demi le montant de 2019. Le Vlaams Belang, avec environ 1,5 million d'euros d'investissement Meta entre février et juin 2024, a obtenu **22,8 % en Flandre aux fédérales** (31 sièges au Parlement flamand) et 14,5 % aux européennes (3 sièges). VRT NWS a révélé le 30 mai 2024 un réseau de comptes fantômes TikTok — *Complexloosrechts*, *Vlaamse visie*, *V-Nieuws* — relayant slogans VB sans mention d'affiliation, tirant parti de l'algorithme « Voor Jou ».
+
+Côté francophone, **Chez Nous** (Jérôme Munier, Gregory Vanden Bruel) a contourné le cordon sanitaire via TikTok et Instagram sans décrocher d'élu (0,92 % à la Chambre, 2,83 % au Parlement wallon). Le tribunal de Liège l'a condamné fin mai 2024 à 2 000 euros d'astreinte par infraction pour usage abusif de l'image de Marine Le Pen ; le parti est au bord de l'implosion depuis septembre 2024. Le PTB-PVDA (Raoul Hedebouw, 94,1 % au Congrès d'Unité du 5 décembre 2021) consolide sa percée à 8,3 % en Flandre et autour de 20 % de la gauche francophone, sur une ligne « pacifiste-socioéconomique » : condamnation verbale de l'invasion russe mais refus du cadre OTAN et du financement militaire. Le MR de Georges-Louis Bouchez s'est imposé comme le parti le plus actif sur X (3 175 posts présidentiels en 2024), dans une stratégie de guerre culturelle contre la gauche documentée par *La Libre*.
+
+### Le clivage linguistique comme vulnérabilité stratégique
+
+La Belgique fonctionne en pratique comme **deux espaces informationnels quasi étanches**. Les publics francophones lisent peu la presse flamande et inversement. Cette asymétrie, déjà structurelle, offre un terrain idéal aux opérateurs d'influence : les mêmes événements (Ukraine, migration, climat, Arizona) reçoivent des cadrages souvent opposés au nord et au sud, sans médiation croisée.
+
+Sur l'Ukraine, De Standaard, VRT NWS et De Morgen tiennent depuis 2022 un cadrage explicitement atlantiste-sécuritaire ; la RTBF, Le Soir et La Libre maintiennent un soutien modéré à Kiev mais donnent davantage d'espace aux critiques du PTB. Sur la migration, le Vlaams Belang a imposé en Flandre le cadrage « échec du multiculturalisme » via une campagne virale autour de la bagarre de Geel (avril 2024, 125 000 impressions Facebook pour 600 à 800 euros). Côté francophone, la couverture reste majoritairement humanitaire. Sur le climat et l'énergie, l'alignement N-VA/CD&V sur le nucléaire et la réindustrialisation contraste avec la polarisation PS/Ecolo/PTB au sud. Les acteurs hostiles — étatiques ou non — exploitent ces écarts : Russosphère et Collon au sud, Creyelman et certaines franges radicales au nord.
+
+### Les think tanks et régulateurs : un écosystème dense mais sous-équipé
+
+L'**Institut Egmont** (Sven Biscop, Alexander Mattelaer, Nina Wilén, Thomas Renard) constitue le pilier analytique, complété par l'IRSD et Bruegel. Les services d'études partisans — Institut Emile Vandervelde (PS), CEPESS (Les Engagés), Institut Jean Gol (MR) — participent à la fabrique des récits. Le CRISP (Benjamin Biard, Jean Faniel) fournit la documentation académique de référence, notamment sur Chez Nous.
+
+Côté régulation, le CSA (Karim Ibourki, FWB), le VRM (Flandre) et le Medienrat germanophone encadrent l'audiovisuel. Depuis le 9 janvier 2025, l'**IBPT est coordinateur national pour le Digital Services Act**. Le premier rapport DSA belge de mai 2025 est néanmoins sévère : le CSA n'a reçu qu'une plainte (contre Wikipédia, non instruite), le VRM et le Medienrat aucune plainte recevable, **aucune action proactive coordonnée contre la désinformation** n'a été lancée au niveau national.
+
+## Niveau micro : l'individu dans la chaîne de diffusion
+
+### Profils de vulnérabilité
+
+La confiance belge de 44 % dans l'information mesurée par Reuters dissimule des profils très contrastés. Les jeunes de 18-24 ans, la population la moins instruite et les habitants des zones périphériques apparaissent plus exposés ; en Wallonie, la défiance envers « les médias » en bloc est plus marquée, nourrissant un terreau conspirationniste post-gilets jaunes. Les algorithmes TikTok, X (post-rachat Musk) et les groupes privés Telegram accentuent les bulles. Selon SIMODS (mars-avril 2025), **les comptes à faible crédibilité génèrent sur X cinq à huit fois plus d'engagement que les sources fiables**.
+
+### Mouvements collectifs et radicalisations
+
+Les gilets jaunes belges (novembre 2018 – janvier 2019, quasi exclusivement francophones) ont constitué une matrice : de nombreux animateurs ont basculé vers les mobilisations anti-COVID de 2021-2022 — Samen Voor Vrijheid, Europeans United, Belgium United For Freedom, Wij Het Volk, Éveil du peuple belge, Civitas — infiltrées, selon Résistances.be et l'Observatorium, par l'extrême droite catholique intégriste (Katholiek Forum) et néo-nazie (Voorpost). Les manifestations bruxelloises du 21 novembre 2021 et du 23 janvier 2022 ont dégénéré en émeutes.
+
+En Flandre, **Dries Van Langenhove et Schild & Vrienden** — groupes fermés Facebook et Discord échangeant mèmes racistes, sexistes et négationnistes, révélés par la VRT dès 2018 — ont connu une issue judiciaire emblématique : le 13 janvier 2026, la Cour de cassation rejette définitivement tous les pourvois de Van Langenhove (1 an avec sursis, 1 600 euros, 10 ans d'inéligibilité). Il s'est depuis tourné vers le public américain, illustrant la transnationalisation des figures radicales.
+
+### Les têtes de pont francophones du narratif pro-russe
+
+**Michel Collon**, ex-PTB devenu chroniqueur pour RT, anime Investig'Action et la chaîne YouTube *Michel Midi* (plus de 100 000 abonnés à sa newsletter). Son ouvrage *Ukraine. La guerre des images* (2023) reprend systématiquement les éléments de langage du Kremlin : remise en cause des massacres de Boutcha et Marioupol, accusations d'inversion sur Nord Stream, récit de l'OTAN « encercleur ». Conspiracy Watch et le sociologue Marc Jacquemain (ULiège) le qualifient de confusionniste.
+
+**Luc Michel** (Charleroi, ex-néonazi FANE/Occident, disciple de Jean Thiriart, mort le 1er avril 2025) a été identifié par la BBC et Logically début février 2023 comme fondateur de **Russosphère**, réseau francophone pro-Kremlin lancé mi-2021 et déployé à partir du 24 février 2022, visant l'Afrique francophone — 80 000 abonnés début 2023, qualifiant l'armée ukrainienne de « nazis » et « satanistes » et glorifiant Wagner. La RTBF (18 février 2024) et la VRT (TerZake, 17 février 2024) ont documenté ses liens passés avec Frank Creyelman.
+
+### Cas viraux documentés
+
+Les biolabs ukrainiens (#USBiolabs dès le 24 février 2022), les rumeurs sur Molenbeek, les récits « grand reset » OMS/WEF portés par la Belge antivax Senta Depuydt, et surtout **l'émergence des deepfakes IA** : le 18 décembre 2025, une fausse vidéo TikTok montrant une pseudo-journaliste RTBF recueillant les larmes d'un agriculteur manifestant à Bruxelles a été générée par Sora 2 (OpenAI), identifiée par EDMO BELUX et Faky grâce au logo RTBF incorrect et au micro non conforme. Le compte *scrollmoviee* avait déjà produit des deepfakes imitant Sudinfo, BFM TV et RTL. La chaîne d'amplification macro → méso → micro se referme : un outil technologique global, repris par un acteur opportuniste, nourrit un récit politique local (colère agricole) relayé auprès d'utilisateurs belges dont 71,5 % des 16-24 ans consultent quotidiennement TikTok.
+
+## La coalition Arizona et l'Ukraine : deux épreuves narratives
+
+La formation du gouvernement **De Wever Ier le 3 février 2025, après 239 jours de négociations**, constitue un séisme narratif autant qu'institutionnel : premier nationaliste flamand Premier ministre de Belgique, coalition à cinq (N-VA, MR, Les Engagés, Vooruit, CD&V) où aucun parti francophone de gauche ni écologiste n'est représenté. En Flandre, la presse met en avant la modération de De Wever et le maintien du cordon sanitaire. Au sud, Le Soir, la RTBF et La Libre évoquent « le gouvernement le plus à droite de l'histoire » ; la FGTB déclenche une grève générale dès le 4 février 2025 ; la mobilisation du 13 février rassemble environ 100 000 manifestants sous le slogan « On n'est pas des citrons ». Deux pays, deux récits — c'est précisément la configuration qu'exploitent les opérateurs FIMI.
+
+Sur l'Ukraine, la Belgique a signé le 28 mai 2024 un accord prévoyant 977 millions d'euros d'aide 2024 et **30 F-16 livrés d'ici 2028**. En avril 2026, aucun F-16 n'a quitté le territoire belge : le ministre Theo Francken (N-VA) parle d'un « flou volontaire » lié aux livraisons F-35 à Florennes (13 octobre 2025, sept ans de retard). Ce décalage entre promesse publique et réalité opérationnelle nourrit directement les narratifs pro-russes sur « l'hypocrisie occidentale » et la « fatigue européenne » — validés dans l'opinion par la victoire de Donald Trump le 5 novembre 2024 et le discours de J. D. Vance à Munich (février 2025) attaquant frontalement le modèle démocratique européen.
+
+## Leçons européennes et résilience belge
+
+Trois précédents européens de 2024-2025 éclairent la vulnérabilité belge.
+
+| Cas | Mécanisme narratif | Enseignement pour la Belgique |
+|---|---|---|
+| **Roumanie, 6 décembre 2024** | 25 000 comptes TikTok amplifient Călin Georgescu, 23 % au 1er tour ; annulation par la Cour constitutionnelle | Un acteur plateforme non régulé peut détourner un scrutin national |
+| **Slovaquie, 15 mai 2024** | Tentative d'assassinat de Robert Fico par Juraj Cintula (21 ans de prison, 21 octobre 2025) | La polarisation narrative mène à la violence politique physique |
+| **Allemagne, 23 février 2025** | AfD à 20,8 %, amplification directe par Elon Musk via X | Un propriétaire de plateforme peut peser sur une élection fédérale |
+
+La réponse européenne repose sur quatre instruments principaux. Le **Digital Services Act** (pleinement applicable depuis février 2024) a permis l'ouverture d'une procédure formelle contre Meta le 30 avril 2024 pour traitement insuffisant de Doppelganger, et contre TikTok le 17 décembre 2024 sur le dossier roumain. Le **Code de conduite renforcé sur la désinformation** a été intégré formellement au DSA le 13 février 2025. L'**European Democratic Shield** (communication JOIN(2025) 791 du 12 novembre 2025) regroupe une cinquantaine d'actions, crée un Centre européen pour la résilience démocratique opérationnel depuis le 24 février 2026, un réseau indépendant de fact-checkers et un protocole de crise DSA. Les premières sanctions FIMI ont été adoptées en décembre 2024.
+
+Les critiques (Jacques Delors Centre, European Policy Centre, Verfassungsblog) dénoncent néanmoins **un écart massif entre rhétorique et moyens** : prédominance du soft law, focus excessif sur la FIMI étrangère au détriment des menaces internes, et risque que le Digital Omnibus Regulation affaiblisse le DSA sous pression de l'administration Trump.
+
+En Belgique, l'écosystème de réponse est dense mais sous-dimensionné. La VSSE et la SGRS documentent et alertent. Média Animation (FWB, CSEM), Mediawijs (Flandre), Faky/Décrypte (RTBF), Factcheck.Vlaanderen (VRT), AFP Factuel, La Source (La Libre) et le consortium **EDMO BELUX** (coordonné par SMIT-VUB) ont produit plus de 700 fact-checks en cinq langues depuis 2022. Mais face à 15 millions d'euros de publicité partisane en 2024 et à la vitesse algorithmique, l'éducation aux médias reste quantitativement marginale.
+
+## Clés pour un dossier d'éducation permanente
+
+Quatre messages se dégagent de cette cartographie, directement mobilisables pour un travail citoyen.
+
+**Premier message : la guerre narrative n'est pas une affaire « étrangère »**. Elle articule des opérateurs étatiques russes et chinois, des relais politiques internes (Collon, Luc Michel, frères Creyelman, frange Vlaams Belang), des entrepreneurs de récit (Chez Nous, réseaux anti-COVID) et des citoyens récepteurs. La séparer en niveaux étanches est analytiquement utile, mais **c'est précisément leur couplage qui fait la puissance du dispositif**.
+
+**Deuxième message : le clivage linguistique belge est une vulnérabilité stratégique**. L'écart de confiance de 16 points entre Flandre et Wallonie, l'absence de médiation croisée, les cadrages opposés sur Ukraine, Arizona ou migration, créent deux publics que des acteurs extérieurs peuvent travailler séparément avec des récits sur mesure. Tout projet d'éducation permanente doit **intégrer systématiquement la dimension bilingue et la comparaison croisée des unes**.
+
+**Troisième message : la technologie accélère sans créer les conditions**. Les deepfakes Sora 2, l'amplification TikTok en Roumanie ou l'algorithme « Voor Jou » ne produisent de dégâts qu'adossés à des failles préexistantes — défiance institutionnelle, polarisation partisane, fatigue démocratique, fragmentation médiatique. L'investissement citoyen dans la littératie numérique doit se doubler d'un travail sur le lien démocratique lui-même.
+
+**Quatrième message : la résilience passe par la banalisation du fact-checking et la transparence**. Les outils existent (Faky, Factcheck.Vlaanderen, EDMO BELUX, DSA article 40 pour les chercheurs). Il leur manque **une appropriation à grande échelle par les corps intermédiaires** — syndicats, associations, écoles, maisons de jeunes, communes. Le retard des F-16 belges montre par ailleurs que le premier contre-récit à la FIMI reste la crédibilité de la parole publique elle-même : un État qui tient ses engagements et les explique désamorce mécaniquement une partie des narratifs hostiles.
+
+La guerre narrative, loin d'être une fatalité technique, est un test de la qualité démocratique. La Belgique, par sa position institutionnelle, sa fragmentation et son expertise, a les moyens d'en faire un laboratoire de résilience plutôt qu'une vitrine de vulnérabilité. Encore faut-il que les citoyens et les corps intermédiaires s'emparent eux-mêmes des grilles d'analyse — ce à quoi ce dossier se veut une contribution.
