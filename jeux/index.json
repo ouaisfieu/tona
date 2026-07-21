@@ -1,10 +1,22 @@
 {
   "decks": [
     {
-      "file": "guerre-cognitive.csv",
-      "id": "guerre-cognitive",
-      "title": "Guerre cognitive — repères et doctrines",
-      "description": "Définitions, doctrines (OTAN, Russie, Chine), concepts clés et acteurs de la guerre cognitive et narrative."
+      "file": "guerre-cognitive-moyen.csv",
+      "id": "guerre-cognitive-moyen",
+      "title": "Guerre cognitive — repères et doctrines (Niveau moyen)",
+      "description": "Définitions, doctrines (OTAN, Russie, Chine), concepts clés et acteurs de la guerre cognitive et narrative. (Niveau moyen)"
+    },
+    {
+      "file": "guerre-cognitive-facile.csv",
+      "id": "guerre-cognitive-facile",
+      "title": "Guerre cognitive — repères et doctrines (Niveau facile)",
+      "description": "Définitions, doctrines (OTAN, Russie, Chine), concepts clés et acteurs de la guerre cognitive et narrative. (Niveau facile)"
+    },
+    {
+      "file": "guerre-cognitive-difficile.csv",
+      "id": "guerre-cognitive-difficile",
+      "title": "Guerre cognitive — repères et doctrines (Niveau expert)",
+      "description": "Définitions, doctrines (OTAN, Russie, Chine), concepts clés et acteurs de la guerre cognitive et narrative. (Niveau expert)"
     }
   ]
 }
