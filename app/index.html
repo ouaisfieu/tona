@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>App Cartes v2 — révision FSRS | TONA</title>
+<meta name="description" content="Application de révision par répétition espacée : véritable algorithme FSRS, texte à trous (cloze), rendu Markdown et LaTeX, gamification bienveillante. 100% locale, sans serveur.">
+<meta name="theme-color" content="#0b0e14">
+<link rel="canonical" href="https://ouaisfieu.github.io/tona/app/">
+<link rel="manifest" href="manifest.webmanifest">
+
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="assets/css/app.css">
+
+<!-- KaTeX (rendu LaTeX), chargé en différé — l'app reste utilisable si hors-ligne/échec de chargement -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="brand" href="../index.html" aria-label="TONA — accueil">
+        <svg class="brand__glyph" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="13" fill="#141a26"/><path d="M6 32 H18 Q22 32 24 24 Q27 12 30 32 Q32 46 35 22 Q37 12 40 40 Q42 50 45 32 H58" fill="none" stroke="#F0B23C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M35 22 Q37 12 40 40" fill="none" stroke="#E5533D" stroke-width="3" stroke-linecap="round"/></svg>
+        <span class="brand__name">T<b>O</b>NA<span class="brand__tag">App Cartes v2</span></span>
+      </a>
+      <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+      <div class="nav__links" id="menu">
+        <a href="../comprendre.html">Comprendre</a>
+        <a href="../belgique.html">Belgique</a>
+        <a href="../se-defendre.html">Se défendre</a>
+        <a href="../ressources.html">Ressources</a>
+        <a href="../cartes.html">Cartes (v1)</a>
+        <a href="index.html" aria-current="page">App v2</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="pagehead">
+    <div class="pagehead__grid" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="breadcrumb"><a href="../index.html">Accueil</a><span>/</span><a href="../cartes.html">Cartes</a><span>/</span>App v2</p>
+      <p class="kicker" style="margin-top:1.4rem;">Version expérimentale</p>
+      <h1 class="balance">App Cartes v2 — moteur FSRS</h1>
+      <p class="pagehead__intro pretty">Un vrai planificateur FSRS-4.5 (pas un simple « su / pas su »), le texte à trous, le rendu Markdown et LaTeX, et une progression (XP, niveaux, séries) sans mécaniques de type loot-box. Tout tourne dans votre navigateur — aucune donnée n'est envoyée à un serveur.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="wrap">
+      <div id="app"><p class="hint">Chargement…</p></div>
+    </div>
+  </section>
+</main>
+
+<!-- Nouveau paquet -->
+<dialog id="dlg-newdeck" class="modal">
+  <form novalidate>
+    <div class="modal__head"><h3>Créer un paquet</h3><button type="button" class="modal__close" data-close aria-label="Fermer">✕</button></div>
+    <div class="modal__body">
+      <div class="field"><label for="nd-title">Titre</label><input id="nd-title" name="title" type="text" required placeholder="Ex. : Vocabulaire FIMI"></div>
+      <div class="field"><label for="nd-desc">Description <span class="hint">(optionnelle)</span></label><input id="nd-desc" name="description" type="text"></div>
+    </div>
+    <div class="modal__foot"><button type="button" class="btn btn--ghost" data-close>Annuler</button><button type="submit" class="btn btn--primary">Créer</button></div>
+  </form>
+</dialog>
+
+<!-- Importer -->
+<dialog id="dlg-import" class="modal">
+  <form novalidate>
+    <div class="modal__head"><h3>Importer</h3><button type="button" class="modal__close" data-close aria-label="Fermer">✕</button></div>
+    <div class="modal__body">
+      <div class="field">
+        <label for="imp-file">Fichier CSV ou JSON</label>
+        <input id="imp-file" name="file" type="file" accept=".csv,.json,text/csv,application/json">
+        <p class="hint">CSV : deux colonnes « question,réponse ». Une question contenant <code>{{c1::...}}</code> génère automatiquement des cartes à trous.</p>
+      </div>
+      <div class="field"><label for="imp-paste">Ou collez du CSV</label><textarea id="imp-paste" name="pasted" rows="5"></textarea></div>
+    </div>
+    <div class="modal__foot"><button type="button" class="btn btn--ghost" data-close>Annuler</button><button type="submit" class="btn btn--primary">Importer</button></div>
+  </form>
+</dialog>
+
+<!-- Bibliothèque intégrée -->
+<dialog id="dlg-catalog" class="modal">
+  <div class="modal__head"><h3>Bibliothèque intégrée</h3><button type="button" class="modal__close" data-close aria-label="Fermer">✕</button></div>
+  <div class="modal__body" data-catalog-body></div>
+  <div class="modal__foot"><button type="button" class="btn btn--ghost" data-close>Fermer</button></div>
+</dialog>
+
+<!-- Confirmation -->
+<dialog id="dlg-confirm" class="modal">
+  <div class="modal__head"><h3>Confirmer</h3><button type="button" class="modal__close" data-close aria-label="Fermer">✕</button></div>
+  <div class="modal__body"><p data-confirm-msg>Confirmer cette action ?</p></div>
+  <div class="modal__foot"><button type="button" class="btn btn--ghost" data-close>Annuler</button><button type="button" class="btn btn--danger" data-confirm-yes>Confirmer</button></div>
+</dialog>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="brand" href="../index.html" aria-label="TONA — accueil">
+          <svg class="brand__glyph" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="13" fill="#141a26"/><path d="M6 32 H18 Q22 32 24 24 Q27 12 30 32 Q32 46 35 22 Q37 12 40 40 Q42 50 45 32 H58" fill="none" stroke="#F0B23C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M35 22 Q37 12 40 40" fill="none" stroke="#E5533D" stroke-width="3" stroke-linecap="round"/></svg>
+          <span class="brand__name">T<b>O</b>NA</span>
+        </a>
+        <p class="foot__about">Dossier d'éducation permanente sur la guerre cognitive et narrative.</p>
+      </div>
+      <div class="foot__col">
+        <h5>Le dossier</h5>
+        <ul>
+          <li><a href="../comprendre.html">Comprendre</a></li>
+          <li><a href="../belgique.html">Belgique</a></li>
+          <li><a href="../se-defendre.html">Se défendre</a></li>
+          <li><a href="../ressources.html">Ressources</a></li>
+        </ul>
+      </div>
+      <div class="foot__col">
+        <h5>Cartes</h5>
+        <ul>
+          <li><a href="../cartes.html">Version 1 (simple)</a></li>
+          <li><a href="index.html">Version 2 (FSRS)</a></li>
+          <li><a href="https://github.com/ouaisfieu/tona" rel="noopener">Code source</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <p>© <span data-year>2026</span> TONA — Éducation permanente</p>
+      <p><a href="https://github.com/ouaisfieu/tona" rel="noopener">github.com/ouaisfieu/tona</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
